@@ -666,7 +666,7 @@ class Csw(object):
         if isinstance(self.contenttype, bytes):
             self.contenttype = self.contenttype.decode()
 
-        s = (u'%s%s%s' % (xmldecl, appinfo, response)).encode(self.encoding)
+        s = ('%s%s%s' % (xmldecl, appinfo, response)).encode(self.encoding)
         LOGGER.debug('Response code: %s',
                      self.context.response_codes[self.status])
         LOGGER.debug('Response:\n%s', s)
